@@ -5,13 +5,14 @@
 package notepad;
 
 /**
- *
+ * Clase Principal del programa
  * @author dam2
+ * version 0.1
  */
 public class Notepad {
 
     /**
-     * @param args the command line arguments
+     * @param args valores de inicio tipo String
      */
     public static void main(String[] args) {
         // TODO code application logic here

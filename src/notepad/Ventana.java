@@ -4,6 +4,9 @@
  */
 package notepad;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author dam2
@@ -26,18 +29,41 @@ public class Ventana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        labelEstado = new javax.swing.JLabel();
+        panelCentral = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        btnOPEN = new javax.swing.JButton();
+        btnEXIT = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        labelEstado.setText("INICIANDO...");
+        getContentPane().add(labelEstado, java.awt.BorderLayout.PAGE_END);
+
+        panelCentral.setLayout(new java.awt.BorderLayout());
+
+        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        btnOPEN.setText("jButton1");
+        jPanel1.add(btnOPEN);
+
+        btnEXIT.setText("jButton2");
+        jPanel1.add(btnEXIT);
+
+        panelCentral.add(jPanel1, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(panelCentral, java.awt.BorderLayout.CENTER);
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,5 +104,22 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEXIT;
+    private javax.swing.JButton btnOPEN;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelEstado;
+    private javax.swing.JPanel panelCentral;
     // End of variables declaration//GEN-END:variables
+}
+
+class ManejadorClicks implements ActionListener{
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+    }
+    
 }
